@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Описание страницы" />
+    <link href="https://fonts.cdnfonts.com/css/blocktastic" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/6899c3dcee443716273e3f7926cc1ec7?family=Rhinos+rocks" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      body {background: #f4f4f4;}
+      a{
+        text-decoration: none;
+      }
+      .horizontal-timeline .items {
+        border-top: 2px solid #ddd;
+        }
+        
+      .horizontal-timeline .items .items-list {
+      position: relative;
+      margin-right: 0;
+      }
+      
+      .horizontal-timeline .items .items-list:before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: #ddd;
+      top: 0;
+      margin-top: -5px;
+      }
+      
+      .horizontal-timeline .items .items-list {
+      padding-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <p style="font-family: blocktastic, sans-serif; font-size: 2em; ">AKE</p>
+            <p style="font-family: Rhinos rocks; font-size: 1.2em;" class="pt-1 ps-1">STORE</p>
+          </a>
+    
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="{% url '' %}" class="nav-link px-2 link-dark">Главная</a></li>
+            <li><a href="{% url '' %}" class="nav-link px-2 link-dark">Каталог</a></li>
+            <li><a href="{% url '' %}" class="nav-link px-2 link-dark">FAQ</a></li>
+            <li><a href="{% url '' %}" class="nav-link px-2 link-dark">О нас</a></li>
+            <!-- {% if request.user.is_staff and request.user.is_authenticated%}<li><a href="{% url 'admin:index' %}" class="nav-link px-2 link-dark">Админ панель</a></li>{% endif %} -->
+          </ul>
+          <div class="col-md-3 text-end">
+            {% if request.user.is_authenticated %}<a href="{% url 'logout' %}"><button type="button" class="btn btn-primary">Выйти</button></a>{% endif %}
+          </div>
+        </header>
+    <div class="container">
+      {% if messages %}
+      <hr/>
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
