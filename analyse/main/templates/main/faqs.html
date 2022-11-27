@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% block title %}
+FAQ
+{% endblock %}
+
+{%block content%}
+<main class="px-5">
+      <div class="mt-4 p-5 mb-3 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Вопросы и ответы</h1>
+          <p class="col-md-8 fs-4">Здесь собраны самые часто задаваемые вопросы, касательно этого сервиса.</p>
+          <p class="col-md-8 fs-4">Если вы не нашли интересующий вас вопрос в списке ниже, то задайте его нам на почте question@gmail.com. Мы ответим вам в кртачайшие сроки</p>
+        </div>
+      </div>
+  
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-white bg-dark rounded-3">
+            <h2>Как пользоваться поисковиком?</h2>
+            <p>Для того чтобы пользоваться данным сервисом вам необходимо зарегистрироваться/авторизоваться и перейти на страницу "Найти товар" и ввести интересующий вас запрос</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-warning border rounded-3">
+            <h2>Как задать корректный запрос?</h2>
+            <p>Например вы хотите найти "Apple iPhone 13 128GB Black", вам необходимо ввести максимально развернутый запрос, чтобы избежать не нужных результатов поиска. Если же выхотите посмотреть все модели "Apple iPhone 12", то вы просто можете ввести "iPhone 12", сервис вас поймет и предложит найденные варианты</p>
+          </div>
+        </div>
+      </div>
+  </main>
+{% endblock %}

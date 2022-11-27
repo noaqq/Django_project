@@ -1,4 +1,23 @@
 {% extends 'main/base.html' %}
 {% block title %}
-FAQ
+О нас
 {% endblock %}
+
+{%block content%}
+<div class="px-5">
+
+    <div class="px-5 row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+        <img src="https://assets.materialup.com/uploads/f0cee471-2995-41b5-8683-f54e6fe282e4/preview.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Познакомимся?</h1>
+        <p class="lead">Я - интернет ресурс по анализу цен интернет магазинов. Я помогу найти вам самую выгодную цену на товар. В моем арсенале два сайта для сравнения цен на технику Apple, если быть точнее на iPhone. Сравнение происходит в магазинах Mvideo и Эльдорадо. Я думаю что на первое время данной информации вам хватит :) Скорее опрбуйте мои функции.</p>
+        <p class="lead text-muted">P.S Рекомендаии и критику жду на почту, указанную в футере :)</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="{% url 'index' %}" type="button" class="btn btn-warning btn-lg px-4 me-md-2">Вернуться на главную</a>
+        </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

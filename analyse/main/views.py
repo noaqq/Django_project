@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import redirect, render
 
 from .forms import RegisterUserForm
+from .models import Price
 
 
 # Create your views here.
@@ -43,3 +44,24 @@ def index(request):
 
 def about(request):
     return render(request, "main/about.html")
+
+
+def faqs(request):
+    return render(request, "main/faqs.html")
+
+
+def search(request):
+    if request.method == "POST":
+        name = request.POST["name"]
+        items = analyse(name)
+        return render(
+            request,
+            "main/search.html",
+            {"items": items, "search": name, "len": len(items), "phone": True},
+        )
+    return render(request, "main/search.html")
+
+
+def analyse(name):
+    result = Price.objects.filter(name__icontains=name)
+    return [r for r in result]
