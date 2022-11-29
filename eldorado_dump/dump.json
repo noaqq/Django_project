@@ -1,0 +1,122 @@
+[
+    {
+        "productId": "1",
+        "name": "Смартфон Apple iPhone 14 256GB Blue",
+        "price": "88999"
+    },
+    {
+        "productId": "2",
+        "name": "Смартфон Apple iPhone 11 128GB White",
+        "price": "42999"
+    },
+    {
+        "productId": "3",
+        "name": "Смартфон Apple iPhone 14 Plus 256GB Blue",
+        "price": "104999"
+    },
+    {
+        "productId": "4",
+        "name": "Смартфон Apple iPhone 14 Pro 256GB Deep Purple",
+        "price": "121999"
+    },
+    {
+        "productId": "5",
+        "name": "Смартфон Apple iPhone 13 Pro 128GB Sierra Blue",
+        "price": "89999"
+    },
+    {
+        "productId": "6",
+        "name": "Смартфон Apple iPhone 13 Pro Max 256GB Sierra Blue",
+        "price": "107999"
+    },
+    {
+        "productId": "7",
+        "name": "Смартфон Apple iPhone 13 Pro Max 128GB Graphite",
+        "price": "95999"
+    },
+    {
+        "productId": "8",
+        "name": "Смартфон Apple iPhone 13 Pro Max 256GB Alpine Green",
+        "price": "107999"
+    },
+    {
+        "productId": "9",
+        "name": "Смартфон Apple iPhone 13 Pro Max 128GB Silver",
+        "price": "95999"
+    },
+    {
+        "productId": "10",
+        "name": "Смартфон Apple iPhone SE 128GB White",
+        "price": "40999"
+    },
+    {
+        "productId": "11",
+        "name": "Смартфон Apple iPhone 12 128GB Black",
+        "price": "61999"
+    },
+    {
+        "productId": "12",
+        "name": "Смартфон Apple iPhone 12 128GB Blue",
+        "price": "64999"
+    },
+    {
+        "productId": "13",
+        "name": "Смартфон Apple iPhone 12 64GB Black",
+        "price": "59999"
+    },
+    {
+        "productId": "14",
+        "name": "Смартфон Apple iPhone 12 128GB Purple",
+        "price": "61999"
+    },
+    {
+        "productId": "15",
+        "name": "Смартфон Apple iPhone 11 128GB Black",
+        "price": "42999"
+    },
+    {
+        "productId": "16",
+        "name": "Смартфон Apple iPhone 13 128GB Green",
+        "price": "68999"
+    },
+    {
+        "productId": "17",
+        "name": "Смартфон Apple iPhone 12 128GB White",
+        "price": "64999"
+    },
+    {
+        "productId": "18",
+        "name": "Смартфон Apple iPhone 11 128GB Green",
+        "price": "42999"
+    },
+    {
+        "productId": "19",
+        "name": "Смартфон Apple iPhone 13 128GB Pink",
+        "price": "68999"
+    },
+    {
+        "productId": "20",
+        "name": "Смартфон Apple iPhone 13 Pro Max 256GB Graphite",
+        "price": "107999"
+    },
+    {
+        "productId": "21",
+        "name": "Смартфон Apple iPhone 11 64GB Black",
+        "price": "41999"
+    },
+    {
+        "productId": "22",
+        "name": "Смартфон Apple iPhone 14 256GB Midnight",
+        "price": "88999"
+    },
+    {
+        "productId": "23",
+        "name": "Смартфон Apple iPhone 13 Pro 128GB Graphite",
+        "price": "89999"
+    },
+    {
+        "productId": "24",
+        "name": "Смартфон Apple iPhone 14 128GB Midnight",
+        "price": "79999"
+    }
+]

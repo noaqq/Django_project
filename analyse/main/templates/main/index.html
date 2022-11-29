@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Главная
+{% endblock %}
+
+{%block content%}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-warning text-dark">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 fw-normal">Покупай с нами</h1>
+    <p class="lead fw-normal">Сервис по анализу цен интернет магазинов</p>
+    {% if request.user.is_authenticated %} <a class="btn btn-dark" href="{% url 'search' %}">Начать</a> {%endif%}
+    {% if request.user.is_anonymous %} <a class="btn btn-dark" href="{% url 'register_user' %}">Присоединиться</a> {%endif%}
+
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+
+<div class="d-flex justify-content-center my-md-3 ps-md-3">
+  <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Экономь деньги</h2>
+      <p class="lead">Найдем самую выгодную цену</p>
+    </div>
+    <img src ="https://cdn-icons-png.flaticon.com/512/69/69881.png"  style="width: 45%; height: 190px;"></div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center w-100 my-md-3 ps-md-3">
+  <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Экономь время</h2>
+      <p class="lead">Всю работу сделаем мы</p>
+    </div>
+    <img src ="https://cdn-icons-png.flaticon.com/512/66/66163.png"  style="width: 45%; height: 160px; "></div>
+  </div>
+</div>
+<div class="d-flex justify-content-center w-100 my-md-3 ps-md-3">
+  <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Разница в цене</h2>
+      <p class="lead">Нашли дешевле? Вернем разницу</p>
+    </div>
+    <img src ="http://cdn.onlinewebfonts.com/svg/img_458414.png"  style="width: 45%; height: 180px;"></div>
+  </div>
+</div>
+{%endblock%}

@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Товары
+{% endblock %}
+
+{%block content%}
+<div class="container d-flex justify-content-center mt-3">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKdrqzuTLdqTCl_ztXHtTEGYmvgmOhGlZdeQ&usqp=CAU" height="60" width="60" alt="">
+</div>
+<form class="container" method="POST">
+    <div class="row" >
+      <div class="d-flex justify-content-center">
+        {%csrf_token%} 
+        <input type="search" class="d-flex col align-self-center mt-4" name = "name" placeholder="Введите товар..." aria-label="Search">
+      </div>
+    </div>
+</form>
+{% if phone %}
+<div class="mt-4 text-center">
+    <h3>По запросу {{search}}. Найдено {{len}} товаров</h3>
+</div>
+{%endif%}
+<div class="container">
+    <div class="mt-5 row">
+        {% for item in items %}
+            <div class="mb-5 px-5 d-flex justify-content-center col">
+                <div class="mt-2 card border-0 shadow rounded" style="width: 16rem;">
+                    <img src="{{item.photo}}" 
+                        class="p-3 card-img-top" width="200" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{item.name}}</h5>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text text-center">MVideo</p>
+                            <p class="card-text text-center">{{item.mvideo_price}} р.</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text text-center">Eldorado</p>
+                            <p class="card-text text-center">{{item.eldorado_price}} р.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}
