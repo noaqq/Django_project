@@ -37,7 +37,7 @@
         <div class="text-end">
           {% if request.user.is_anonymous %}<a href="{% url 'login_user' %}" type="button" class="btn btn-outline-light me-2">Вход</a>{% endif %}
           {% if request.user.is_anonymous %} <a href="{% url 'register_user' %}" type="button" class="btn btn-warning">Регистрация</a>{% endif %}
-          {% if request.user.is_authenticated %}<a href="{% url 'logout_user' %}" type="button" class="btn btn-warning me-2">Выход</a>{% endif %}
+          {% if request.user.is_authenticated %}<a href="{% url 'login_user' %}" type="button" class="btn btn-warning me-2">Выход</a>{% endif %}
         </div>
       </div>
     </div>
