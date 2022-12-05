@@ -34,7 +34,6 @@
         <li><a href="{% url 'about' %}" class="nav-link px-2 text-white">О нас</a></li>
         <li><a href="{% url 'faqs' %}" class="nav-link px-2 text-white">FAQs</a></li>
         </ul>
-
         <div class="text-end">
           {% if request.user.is_anonymous %}<a href="{% url 'login_user' %}" type="button" class="btn btn-outline-light me-2">Вход</a>{% endif %}
           {% if request.user.is_anonymous %} <a href="{% url 'register_user' %}" type="button" class="btn btn-warning">Регистрация</a>{% endif %}
@@ -86,5 +85,5 @@
     </div>
   </div>
 </footer>
-        </body>
+</body>
 </html>
