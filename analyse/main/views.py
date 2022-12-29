@@ -40,7 +40,8 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return redirect("index")
+    print(12321312)
+    return render(request, "main/index.html")
 
 
 def index(request):
